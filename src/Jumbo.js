@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-class Jumbo extends Component {
-  render(){
+const Jumbo= (props) => {
+
   	    return(
-      <div className="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid" style={{backgroundColor: props.color}}>
 		  <div className="container">
-		    <h1 className="display-3">{this.props.name}</h1>
+		    <h1 className="display-3" >{props.name}</h1>
 		    <p className="lead">I am awesome </p>
 		  </div>
 		</div>
       )
-  }
+  
 }
 
 
-Jumbo.PropTypes = {
-  name: PropTypes.string
-}
 
 
 export default Jumbo;
